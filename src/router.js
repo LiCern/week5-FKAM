@@ -4,10 +4,16 @@ function router(request, response) {
   const { url } = request;
   if (url === "/") {
     handlers.home(request, response);
+  } else if (url.includes('public')) {
+    handlers.public(request, response);
   } else {
-    response.writeHead(404, { "content-type": "text/html" });
-    response.end(`<h1>Not found</h1>`);
-  }
+    handlers.missing(request, response);
+  } 
+  
+  // GET request for our form.html
+  // POST request when submit form data
+  // DELETE request when deleting a post  
+  // GET request when want show all of the listings
 }
 
 module.exports = router;
