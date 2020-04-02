@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles.css">
+    <title>Surplus shop</title>
 </head>
 <body>
     
-    <header>
-        <h1>placeholder text1</h1>
-        <p>placeholder text2</p>
+    <header class="header">
+        <h1>Surplus shop</h1>
     </header>
 
-    <section class="form-wrapper">
+    <section class="form">
+        <h2>Please add here what you have to share. Please keep one item per post</h2>
         <form class="form__post" id="form" action="/" method="POST">
             <label class="form__label" for="title">Title</label>
             <input class="form__input" type="text" id="title" name="title" required>
@@ -26,10 +26,18 @@
             
             <label class="form__label" for="textBox">What are you going to share?</label>
             <textarea class="form__textbox" form="form" id="textBox" name="textBox" required></textarea>
-            
+            <fieldset>
+                <input type="radio" value="food" id="food" name="category__radios" >
+                <label for="food">Food</label>
+                <input type="radio" value="toiletries" id="toiletries" name="category__radios" >
+                <label for="toiletries">Toiletries</label>
+                <input type="radio" value="household" id="household" name="category__radios" >
+                <label for="household">Household</label>
+                <input type="radio" value="other" id="other" name="category__radios">
+                <label for="other">Other</label>
+            </fieldset>
             <button class="form__button" aria-label="button to submit post" type=submit">Submit</button>
         </form>
     </section>
-    
 </body>
 </html>
