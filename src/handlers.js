@@ -11,17 +11,19 @@ const types = {
 };
 
 function home(request, response) {
-  const filePath = path.join(__dirname, '..', 'public', 'index.html');
-  console.log("home -> filePath", filePath)
-  fs.readFile(filePath, (error, file) => {
-    if (error) {
-      response.writeHead(404, { "content-type": "text/html" });
-      response.end("<h1>Error</h1>")
-    } else {
-      response.writeHead(200, { "content-type": "text/html" });
-      response.end(file);
-    }
-  })
+  response.writeHead(302, { "location": "/public/index.html" });
+  response.end();
+  // const filePath = path.join(__dirname, '..', 'public', 'index.html');
+  // console.log("home -> filePath", filePath)
+  // fs.readFile(filePath, (error, file) => {
+  //   if (error) {
+  //     response.writeHead(404, { "content-type": "text/html" });
+  //     response.end("<h1>Error</h1>")
+  //   } else {
+  //     response.writeHead(200, { "content-type": "text/html" });
+  //     response.end(file);
+  //   }
+  // })
 }
 
 function public(request, response) {
