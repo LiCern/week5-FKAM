@@ -44,18 +44,18 @@ INSERT INTO posts (title, time, category, post, user_id) VALUES
   ('I have 15 chickens going spare', '2016-06-22 19:10:25-07', 4, 'Not for eating. As company!', 3)
 ;
 
-CREATE TABLE comments (
-  id SERIAL PRIMARY KEY,
-  comment TEXT NOT NULL,
-  post_id INTEGER REFERENCES posts(id),
-  user_id INTEGER REFERENCES users(id)
-);
+-- CREATE TABLE comments (
+--   id SERIAL PRIMARY KEY,
+--   comment TEXT NOT NULL,
+--   post_id INTEGER REFERENCES posts(id),
+--   user_id INTEGER REFERENCES users(id)
+-- );
 
-INSERT INTO comments (comment, post_id, user_id) VALUES
-  ('This is so cool', 1, 4),
-  ('Where did you get all of that from? You are a legend!', 2, 1),
-  ('You are so thoughtful, thank you', 4, 3),
-  ('I have lots of them spare to!', 3, 2)
-;
+-- INSERT INTO comments (comment, post_id, user_id) VALUES
+--   ('This is so cool', 1, 4),
+--   ('Where did you get all of that from? You are a legend!', 2, 1),
+--   ('You are so thoughtful, thank you', 4, 3),
+--   ('I have lots of them spare to!', 3, 2)
+-- ;
 
 COMMIT;
