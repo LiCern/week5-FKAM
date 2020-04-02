@@ -1,5 +1,5 @@
 {
-  "name": "surplus-shop",
+  "name": "sharing-is-caring",
   "version": "1.0.0",
   "description": "A place to add and find surplus goods",
   "main": "src/server.js",
@@ -10,7 +10,7 @@
     "watch": "nodemon -q -x 'npm test'"
   },
   "keywords": [],
-  "author": "Oliver Phillips <hello@oliverjam.es> (https://oliverjam.es/)",
+  "author": "Joe joe.m.jackson@live.co.uk, Giovanna to.gio@pm.me, Ina itsina96@gmail.com, Roger github@technicalbloke.com",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",

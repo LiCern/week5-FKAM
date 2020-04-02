@@ -28,6 +28,28 @@ test("Check if delete(1) doesn't crash and delete's something!", t => {
 })
 
 
+test("Check model is exporting the function getAllUsers", t => {
+  t.equal("getAllUsers" in model , true);
+  t.end();
+});
+
+test("Check getAllUsers returns true", t => {
+  t.equal("getAllUsers" in model , true);
+  t.end();
+});
+
+test("Check if getAllUsers gets all users", t => {
+  build().then( () => {
+    model.getAllUsers().then(user => {
+      const allUsers = user;
+      t.equal(allUsers.length, 4);
+      t.end();
+    })  
+  })
+})
+
+
+
 // test("Check if delete(1) deletes the correct thing!", t => {
 //   build()
 //   .then(model.deleteListing(1))
