@@ -4,6 +4,7 @@
     --secondaryColor: hsl(139, 57%, 37%);
     --secondaryHover: hsl(139, 60%, 26%);
 }
+
 body {
     margin: 0 auto;
     background: var(--baseColor);
@@ -14,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 h1 {
     font-weight: bolder;
     text-align: center;
