@@ -69,6 +69,19 @@ main {
     
 }
 
+.fieldset__address {
+    display: flex;
+    justify-content: center;
+}
+
+.fieldset__address > input, textarea {
+    width: 100%;
+}
+
+.fieldset__address > legend {
+    margin-bottom: 1rem;
+}
+
 .form__post {
     display: flex;
     flex-direction: column;
