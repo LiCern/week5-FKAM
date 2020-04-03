@@ -16,18 +16,23 @@
     <section class="form">
         <h3>Please add here what you have to share. Please keep one item per post</h3>
         <form class="form__post" id="form" action="/listings.html" method="POST">
-            <label class="form__label" for="title">Title</label>
-            <input class="form__input" type="text" id="title" name="title" required>
-            
-            <label class="form__label" for="user-name">Name</label>
-            <input class="form__input" type="text" id="user-name" name="user-name" required>
-            
-            <label class="form__label" for="user-postcode">Postcode</label>
-            <input class="form__input" type="text" id="user-postcode" name="user-postcode" required>
-            
-            <label class="form__label" for="textBox">What are you going to share?</label>
-            <textarea class="form__textbox" form="form" id="textBox" name="textBox" required></textarea>
+            <fieldset class="fieldset__address">
+                <legend>Insert your details below kind sharer :)</legend>
+                <label class="form__label" for="title">Title</label>
+                <input class="form__input" type="text" id="title" name="title" required>
+                
+                <label class="form__label" for="user-name">Name</label>
+                <input class="form__input" type="text" id="user-name" name="user-name" required>
+                
+                <label class="form__label" for="user-postcode">Postcode</label>
+                <input class="form__input" type="text" id="user-postcode" name="user-postcode" required>
+                
+                <label class="form__label" for="textBox">What are you going to share?</label>
+                <textarea class="form__textbox" form="form" id="textBox" name="textBox" required></textarea>
+            </fieldset>            
+
             <fieldset>
+                <legend>What kind of item are you sharing?</legend>
                 <input type="radio" value="food" id="food" name="category__radios" >
                 <label for="food">Food</label>
                 <input type="radio" value="toiletries" id="toiletries" name="category__radios" >
