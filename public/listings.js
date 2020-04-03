@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const template = document.getElementById("template")
 const listings = document.getElementById("listings")
 const search = document.getElementById("search")
@@ -65,3 +66,5 @@ searchForm.addEventListener("submit", event => {
     event.preventDefault();
     getPosts();
 });
+=======
+>>>>>>> d61d42e2d1ea8996a7fab3b498ec736e0096bbca
