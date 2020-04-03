@@ -9,8 +9,16 @@ If you have any spare things to give, just FAKM.com!
 ## Install 
 To install the project: 
 1. Clone the project
-2. Run ```npm install``` to setup package dependencies
-4. Run ```npm test```
+2. Run `npm install` to setup package dependencies
+3. Create local production database called whatever you like
+4. Create a test database called mytestdatabase_week_5 with the same owner/user
+5. Create a .env file in the project root
+   PGDATABASE=local_production_database
+   PGUSER=your_db_user
+   PGPASSWORD=your_db_password
+6. Run `npm run wipedb` to init or reset your production db
+7. Run `npm test` to run tests
+8. Run `npm start` to start
 
 ## Schemas
 ```javascript=
