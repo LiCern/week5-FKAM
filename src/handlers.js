@@ -8,6 +8,8 @@ const types = {
   css: "text/css",
   js: "application/javascript",
   ico: "image/x-icon",
+  png: "image/png",
+  PNG: "image/png",
 };
 
 function home(request, response) {
