@@ -7,7 +7,8 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "PGDATABASE=mytestdatabase_week_5 tape src/**/*.test.js | tap-spec",
-    "watch": "nodemon -q -x 'npm test'"
+    "watch": "nodemon -q -x 'npm test'",
+    "wipedb": "node src/database/build.js"
   },
   "keywords": [],
   "author": "Joe joe.m.jackson@live.co.uk, Giovanna to.gio@pm.me, Ina itsina96@gmail.com, Roger github@technicalbloke.com",
