@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/81e6d1b2b6.js"></script>
-    <link rel="stylesheet" href="/public/styles.css">
-    <title>Sharing is caring</title>
-</head>
-<body>
-    
-    <header class="header">
-        <h1>Sharing is caring</h1>
-    </header>
-    
-    <form class="form__search" action="/">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
-    </form>
-    
-    <section class="tags">
-        <p>Filter by</p>
-        <input type="checkbox" id="food" name="food" value="food">
-        <label for="food">Food</label>
-        <input type="checkbox" id="toiletries" name="toiletries" value="toiletries">
-        <label for="toiletries">Toiletries</label>
-        <input type="checkbox" id="household" name="household" value="household">
-        <label for="household">Household</label>
-        <input type="checkbox" id="other" name="other" value="other">
-        <label for="other">Other</label>
-    </section>
-    <ul class="listings" id="listings">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/81e6d1b2b6.js"></script>
+        <link rel="stylesheet" href="/public/styles.css">
+        <title>Sharing is caring</title>
+    </head>
+    <body>
         
-    </ul>
-    <script src="/public/listings.js"></script>
-</body>
+        <header class="header">
+            <h1>Sharing is caring</h1>
+        </header>
+        
+        <form class="form__search" id="searchForm">
+            <input type="text" placeholder="Search.." name="search" id="search">
+            <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+        </form>
+        
+        <section class="tags">
+            <p>Filter by</p>
+            <input type="checkbox" id="food" name="food" value="food">
+            <label for="food">Food</label>
+            <input type="checkbox" id="toiletries" name="toiletries" value="toiletries">
+            <label for="toiletries">Toiletries</label>
+            <input type="checkbox" id="household" name="household" value="household">
+            <label for="household">Household</label>
+            <input type="checkbox" id="other" name="other" value="other">
+            <label for="other">Other</label>
+        </section>
 
-<template id="template">
-    <li class="listing">
-        <h2 class="listing__title"></h2>
-        <p class="listing__name"></p>
-        <p class="listing__postcode"></p>
-        <p class="listing__textbox"></p>
-        <date class="listing__date"></date>
-        <button class="listing-remove__button" aria-label="button to remove listing" type="button">Remove listing</button>
-    </li>
-</template>
+        <ul class="listings" id="listings">    
+        </ul>
 
+        <template id="template">
+            <li class="listing">
+                <h2 class="listing__title"></h2>
+                <p class="listing__name"></p>
+                <p class="listing__postcode"></p>
+                <p class="listing__textbox"></p>
+                <date class="listing__date"></date>
+                <button class="listing-remove__button" aria-label="button to remove listing" type="button">Remove listing</button>
+            </li>
+        </template>
+        
+        <script src="/public/listings.js"></script>
+    </body>
 </html>

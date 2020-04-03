@@ -8,22 +8,13 @@ const types = {
   css: "text/css",
   js: "application/javascript",
   ico: "image/x-icon",
+  png: "image/png",
+  PNG: "image/png",
 };
 
 function home(request, response) {
   response.writeHead(302, { "location": "/public/index.html" });
   response.end();
-  // const filePath = path.join(__dirname, '..', 'public', 'index.html');
-  // console.log("home -> filePath", filePath)
-  // fs.readFile(filePath, (error, file) => {
-  //   if (error) {
-  //     response.writeHead(404, { "content-type": "text/html" });
-  //     response.end("<h1>Error</h1>")
-  //   } else {
-  //     response.writeHead(200, { "content-type": "text/html" });
-  //     response.end(file);
-  //   }
-  // })
 }
 
 function public(request, response) {
@@ -36,8 +27,8 @@ function public(request, response) {
 
   fs.readFile(assetFilePath, (error, file) => {
     if (error) {
-      response.writeHead(404, { "content-type": "text/html"});
-      response.end("<h1>Error file not found!</h1>")
+      response.writeHead(302, { "location": "/public/404.html"});
+      response.end();
     } else {
       response.writeHead(200, { "content-type": type});
       response.end(file);
@@ -46,9 +37,37 @@ function public(request, response) {
 }
 
 function missing(request, response) {
-  response.writeHead(404, { "content-type": "text/html" });
-  response.end("<h1>Not Found</h1>");
+  response.writeHead(302, { "location": "/public/404.html" });
+  response.end();
 }
 
+function getposts(request, response) {
+    let body = "";
+    request.on("data", chunk => (body += chunk));
+    request.on("end", () => {
+        let searchObject = body ? JSON.parse(body) : {};
+        model.getListings(searchObject)
+        .then( listings => {
+            // console.log("THE LISTINGS!!!\n", listings);
+            response.writeHead(200, { "content-type": "application/json" });
+            response.end( JSON.stringify(listings) );
+        })
+        .catch( (err) => console.error("COULDNT GET ALL POSTS:", err) );
+     });
+}
 
-module.exports = { home, missing, public };
+function deletepost(req, res) {
+    data = "";
+    req.on("data", chunk => {data += chunk});
+    req.on("end", () =>{
+      idToDelete = Number(data);
+      model.deleteListing(idToDelete)
+      .then( () => {
+        res.writeHead(200, {"content-type":"text/plain"});
+        res.end("Deleted");
+      })
+      .catch( err => console.error("PROBLEM DELETING POST:", err) )
+    });
+}
+
+module.exports = { home, missing, public, getposts, deletepost };

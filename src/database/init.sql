@@ -32,16 +32,16 @@ CREATE TABLE posts (
   id SERIAL PRIMARY KEY,  
   title VARCHAR(255) NOT NULL,
   time TIMESTAMPTZ,
-  category INTEGER REFERENCES category(id),
+  category INTEGER,
   post TEXT NOT NULL,  
-  user_id INTEGER REFERENCES users(id)
+  user_id INTEGER
 );
 
 INSERT INTO posts (title, time, category, post, user_id) VALUES
-  ('Loads of toilet roll', '2016-06-22 19:10:25-07', 1, 'Literally way more than I can handle', 2),
-  ('Loads of canned peas', '2016-06-22 19:10:25-07', 2, 'Let us all eat our 5 a day', 1),
-  ('Anyone need any wooly socks?', '2016-06-22 19:10:25-07', 3, 'They are so warm', 4),
-  ('I have 15 chickens going spare', '2016-06-22 19:10:25-07', 4, 'Not for eating. As company!', 3)
+  ('Loads of toilet roll', '2020-04-02 09:00:00-00', 1, 'Literally way more than I can handle', 2),
+  ('Loads of canned peas', '2020-04-02 09:01:00-00', 2, 'Let us all eat our 5 a day', 1),
+  ('Anyone need any wooly socks?', '2020-04-02 09:02:00-00', 3, 'They are so warm', 4),
+  ('I have 15 chickens going spare', '2020-04-02 09:03:00-00', 4, 'Not for eating. As company!', 3)
 ;
 
 -- CREATE TABLE comments (
