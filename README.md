@@ -4,6 +4,10 @@ At [Founders and Coders](https://www.foundersandcoders.com/about/) coding bootca
 
 __Week 5 topic__: Database (PosgreSQL)
 
+See [week 5 schedule](https://founders-and-coders.gitbook.io/coursebook/week-5/schedule).
+
+---
+
 
 # Week-5-FAKM Project 
 ## Description
