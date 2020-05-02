@@ -2,7 +2,7 @@
 
 At [Founders and Coders](https://www.foundersandcoders.com/about/) coding bootcamp we are tasked every week with a different project. A MVP is built in 1.5 days by 4 developers that follow the Agile methodology.
 
-__Week 5 topic__: Database (PosgreSQL)
+__Week 5 topic__: Database (PostgreSQL)
 
 See [week 5 schedule](https://founders-and-coders.gitbook.io/coursebook/week-5/schedule).
 
